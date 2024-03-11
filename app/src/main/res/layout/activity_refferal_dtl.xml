@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_refferal_dtl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.studydesk.RefferalDtl">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/topbar"
+        android:background="@drawable/gradient"
+        android:layout_alignParentTop="true"
+        android:padding="5sp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:id="@+id/btnHome"
+                android:layout_alignParentEnd="true"
+                android:background="@mipmap/home48"
+                />
+            <TextView
+                android:layout_width="180sp"
+                android:layout_height="30sp"
+                android:text=""
+                android:textSize="20sp"
+                android:background="@mipmap/arpng"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Engineering Graphics: Your Animated Notebook"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/gradient"
+        android:layout_below="@+id/topbar"
+        android:gravity="center" />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_below="@+id/title"
+        />
+</RelativeLayout>

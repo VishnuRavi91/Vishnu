@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">A R STUDY DESK</string>
+    <string name="lostpassword">Do not have an account? Sign up <a href="https://arstudydesk.com/Signup" target="_top"></a></string>
+
+</resources>

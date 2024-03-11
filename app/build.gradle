@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.example.admin.studydesk'
+    signingConfigs {
+        arstudydesk {
+            storeFile file('D:\\StudyDesk (1)\\Studydesk\\StudyDesk.iml')
+            storePassword 'arstudydesk'
+            keyAlias = var
+            keyPassword 'arstudydesk'
+        }
+    }
+    compileSdkVersion 33
+    buildToolsVersion '30.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.arstudydesk.admin.studydesk"
+        minSdkVersion 17
+        targetSdkVersion 33
+        versionCode 20
+        versionName "20.0"
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    
+    implementation 'com.google.code.ksoap2-android:ksoap2-android:3.6.4'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'com.github.deano2390:MaterialShowcaseView:1.2.0@aar'
+    implementation 'com.github.amlcurran.showcaseview:library:5.0.0'
+    implementation 'com.scottyab:aescrypt:0.0.1'
+    implementation 'com.squareup.okhttp:okhttp:2.4.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+    implementation 'com.github.framgia:android-emulator-detector:1.4.0'
+
+}

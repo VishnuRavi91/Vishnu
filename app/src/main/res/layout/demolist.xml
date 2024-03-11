@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="1dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/border"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01. Engineering Graphics: Your Animated Notebook (EGYAN) (For APJAKTU)"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingTop="10sp"
+                android:paddingLeft="10sp"
+                android:textSize="15sp"
+                android:id="@+id/name"
+                android:paddingRight="10sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="University : APJ Abdul Kalam Technological University, Kerala"
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="10sp"
+                android:paddingTop="10sp"
+                android:paddingRight="10sp"
+                android:id="@+id/uni"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subscription charge : "
+                android:textColor="@color/colorPrimary"
+                android:paddingLeft="10sp"
+                android:paddingTop="5sp"
+                android:visibility="gone"
+                android:paddingRight="10sp"
+                android:id="@+id/lblSubAmtKTU"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/syllink"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/feelink"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/demolink"
+                android:visibility="gone"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+                <Button
+                    android:layout_width="0sp"
+                    android:layout_height="35sp"
+                    android:layout_weight="1"
+                    android:text="SYLLABUS"
+                    android:background="@drawable/buttonstyle"
+                    android:layout_margin="5sp"
+                    android:id="@+id/btnSyllabus"
+                    android:textColor="@color/colorWhite"/>
+                <Button
+                    android:layout_width="0sp"
+                    android:layout_height="35sp"
+                    android:layout_weight="1"
+                    android:text="FEE"
+                    android:background="@drawable/buttonstyle"
+                    android:layout_margin="5sp"
+                    android:id="@+id/btnSubCharge"
+                    android:textColor="@color/colorWhite"/>
+
+                <Button
+                    android:layout_width="0sp"
+                    android:layout_height="35sp"
+                    android:layout_weight="1"
+                    android:text="DEMO"
+                    android:background="@drawable/buttonstyle"
+                    android:layout_margin="5sp"
+                    android:id="@+id/btndemo"
+                    android:textColor="@color/colorWhite"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

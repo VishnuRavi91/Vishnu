@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.admin.studydesk.ModuleSelection">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/topbar"
+        android:background="@drawable/gradient"
+        android:layout_alignParentTop="true"
+        android:padding="5sp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:id="@+id/btnLogout"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/logout"
+                />
+            <TextView
+                android:layout_width="180sp"
+                android:layout_height="30sp"
+                android:text=""
+                android:textSize="20sp"
+                android:background="@mipmap/arpng"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Engineering Graphics: Your Animated Notebook"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/gradient"
+        android:layout_below="@+id/topbar"
+        android:visibility="gone"
+        android:gravity="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblCourse"
+        android:text="Subscribed Courses"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:background="@drawable/gradient"
+        android:layout_below="@+id/title"
+        android:gravity="center" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:outlineProvider="bounds"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/lblCourse"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        />
+
+</RelativeLayout>
