@@ -68,7 +68,7 @@ public class SimpleAdapterModule extends
                 viewHolder.Module.setTextColor(Color.parseColor("#050505"));
             }
 
-            viewHolder.link.setText(jsonObject.getString("tutorial_link"));
+            viewHolder.link.setText(jsonObject.getString("module_link"));
             viewHolder.Module.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

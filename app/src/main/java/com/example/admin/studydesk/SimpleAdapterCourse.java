@@ -58,39 +58,39 @@ public class SimpleAdapterCourse extends
         try {
             jsonObject=list_item.getJSONObject(position);
             viewHolder.Module.setText(jsonObject.getString("course_name").toString());
-            viewHolder.link.setText(jsonObject.getString("course_id").toString());
-            viewHolder.university.setText("University : "+jsonObject.getString("university").toString());
-            viewHolder.offamt.setText("Offer Amount : "+jsonObject.getString("offer_amt").toString());
-            viewHolder.subamt.setText("Subscription Amount : "+jsonObject.getString("subscription_amt").toString());
-            //viewHolder.demo.setText(jsonObject.getString("demo_link").toString());
-            //viewHolder.syllabus.setText(jsonObject.getString("syllabus").toString());
-
-            viewHolder.syllabus.setClickable(true);
-            viewHolder.syllabus.setMovementMethod(LinkMovementMethod.getInstance());
-            String text = "<a href='"+jsonObject.getString("syllabus").toString()+"'> Download Syllabus </a>";
-            viewHolder.syllabus.setText(Html.fromHtml(text));
-
-            viewHolder.demo.setClickable(true);
-            viewHolder.demo.setMovementMethod(LinkMovementMethod.getInstance());
-            String text1 = "<a href='"+jsonObject.getString("demo_link").toString()+"'> Watch Demo </a>";
-            viewHolder.demo.setText(Html.fromHtml(text1));
-            if (jsonObject.getString("active").toString().trim().equals("Y") ){
-                viewHolder.status.setText("Status : Active");
-            }else{
-                viewHolder.status.setText("Status : Inactive");
-            }
+            viewHolder.link.setText(jsonObject.getString("id").toString());
+//            viewHolder.university.setText("University : "+jsonObject.getString("university").toString());
+//            viewHolder.offamt.setText("Offer Amount : "+jsonObject.getString("offer_amt").toString());
+//            viewHolder.subamt.setText("Subscription Amount : "+jsonObject.getString("subscription_amt").toString());
+//            //viewHolder.demo.setText(jsonObject.getString("demo_link").toString());
+//            //viewHolder.syllabus.setText(jsonObject.getString("syllabus").toString());
+//
+//            viewHolder.syllabus.setClickable(true);
+//            viewHolder.syllabus.setMovementMethod(LinkMovementMethod.getInstance());
+//            String text = "<a href='"+jsonObject.getString("syllabus").toString()+"'> Download Syllabus </a>";
+//            viewHolder.syllabus.setText(Html.fromHtml(text));
+//
+//            viewHolder.demo.setClickable(true);
+//            viewHolder.demo.setMovementMethod(LinkMovementMethod.getInstance());
+//            String text1 = "<a href='"+jsonObject.getString("demo_link").toString()+"'> Watch Demo </a>";
+//            viewHolder.demo.setText(Html.fromHtml(text1));
+//            if (jsonObject.getString("active").toString().trim().equals("Y") ){
+//                viewHolder.status.setText("Status : Active");
+//            }else{
+//                viewHolder.status.setText("Status : Inactive");
+//            }
 
 
             viewHolder.Module.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     try {
-                        if (jsonObject.getString("active").toString().trim().equals("Y") ) {
+//                        if (jsonObject.getString("active").toString().trim().equals("Y") ) {
                             ModuleSelection.courseid = viewHolder.link.getText().toString().trim();
                             Intent intent = new Intent(mcontext, ModuleSelection.class);
                             mcontext.startActivity(intent);
-                        }
-                    } catch (JSONException e) {
+//                        }
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }

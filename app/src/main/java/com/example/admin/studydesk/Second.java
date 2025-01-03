@@ -153,10 +153,10 @@ public class Second extends AppCompatActivity {
         btnRegUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SecondDtl.link="https://arstudydesk.com/Login";
+                SecondDtl.link="https://rayaanaravind.in/user/login/";
                 Intent intent = new Intent(Second.this, SecondDtl.class);
                 startActivity(intent);
-               /* String url = "https://arstudydesk.com/Login";
+               /* String url = "https://rayaanaravind.in/Login";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);*/
@@ -165,10 +165,10 @@ public class Second extends AppCompatActivity {
         btnNewUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SecondDtl.link="https://arstudydesk.com/Signup";
+                SecondDtl.link="https://rayaanaravind.in/user/register/";
                 Intent intent = new Intent(Second.this, SecondDtl.class);
                 startActivity(intent);
-                /*String url = "https://arstudydesk.com/Signup";
+                /*String url = "https://rayaanaravind.in/Signup";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);*/
@@ -305,7 +305,7 @@ public class Second extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://arstudydesk.com/Client/backgroundauth");
+            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/backgroundauth/");
 
 
 

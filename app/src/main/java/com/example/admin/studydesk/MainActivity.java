@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://arstudydesk.com/Client/logout");
+            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/logout/");
             post.addHeader("authorization",token);
 
 
