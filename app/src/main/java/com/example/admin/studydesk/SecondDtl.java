@@ -148,13 +148,19 @@ public class SecondDtl extends AppCompatActivity {
             cookieManager.setAcceptThirdPartyCookies(webView, true);
         }
 
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true);
+        } else {
+            CookieManager.getInstance().setAcceptCookie(true);
+        }
+
         // Enable debugging for troubleshooting
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             WebView.setWebContentsDebuggingEnabled(true);
         }
 
         webView.setWebChromeClient(new WebChromeClient());
-
+        webView.addJavascriptInterface(new PaymentInterface(), "PaymentInterface");
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {

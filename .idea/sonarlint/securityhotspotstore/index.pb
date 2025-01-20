@@ -48,3 +48,5 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 j
 :app/src/main/java/com/example/admin/studydesk/Contact.java,3\6\369af14f45f42012c96301e7128410ad69817a86
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
