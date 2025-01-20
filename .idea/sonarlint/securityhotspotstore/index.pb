@@ -48,5 +48,3 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 j
 :app/src/main/java/com/example/admin/studydesk/Contact.java,3\6\369af14f45f42012c96301e7128410ad69817a86
-l
-<app/src/main/java/com/example/admin/studydesk/SecondDtl.java,5\0\50ed235beba22fac1435242c68ea3f14204e5111
