@@ -146,7 +146,7 @@ public class ModuleSelection extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/logout/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/logout/");
             post.addHeader("authorization",token);
 
 
@@ -234,7 +234,7 @@ public class ModuleSelection extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/activitylog/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/activitylog/");
             post.addHeader("authorization",token);
 
 
@@ -319,7 +319,7 @@ public class ModuleSelection extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/getcoursemodules/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/getcoursemodules/");
 
 
             try {

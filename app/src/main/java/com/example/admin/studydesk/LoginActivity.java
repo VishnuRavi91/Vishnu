@@ -78,10 +78,10 @@ public class LoginActivity extends AppCompatActivity {
         tvRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent browser= new Intent(Intent.ACTION_VIEW, Uri.parse("https://rayaanaravind.in/beta/Signup"));
+               /* Intent browser= new Intent(Intent.ACTION_VIEW, Uri.parse("https://arstudydesk.com/beta/Signup"));
                 startActivity(browser);
                 */
-                SecondDtl.link="https://rayaanaravind.in/Signup/";
+                SecondDtl.link="https://arstudydesk.com/Signup/";
                 Intent intent = new Intent(LoginActivity.this, SecondDtl.class);
                 startActivity(intent);
             }
@@ -176,7 +176,7 @@ public class LoginActivity extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/auth/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/auth/");
 
 
                 try {
@@ -298,7 +298,7 @@ public class LoginActivity extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/user/forgotPassword/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/user/forgotPassword/");
 
 
             try {
@@ -392,7 +392,7 @@ public class LoginActivity extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/logout/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/logout/");
             post.addHeader("authorization",token);
 
 

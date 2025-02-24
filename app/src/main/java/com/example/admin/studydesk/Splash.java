@@ -163,7 +163,7 @@ public class Splash extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/backgroundauth/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/backgroundauth/");
 
 
             try {
@@ -269,7 +269,7 @@ public class Splash extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/logout/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/logout/");
             post.addHeader("authorization",token);
 
 

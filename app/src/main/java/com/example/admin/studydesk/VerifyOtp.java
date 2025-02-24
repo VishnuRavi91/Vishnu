@@ -105,7 +105,7 @@ public class VerifyOtp extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/verifyotp/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/verifyotp/");
 
 
             try {
@@ -207,7 +207,7 @@ public class VerifyOtp extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/Client/logout/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/Client/logout/");
             post.addHeader("authorization",token);
 
 

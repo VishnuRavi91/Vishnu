@@ -26,7 +26,4 @@
     <orderEntry type="jdk" jdkName="Android API 33, extension level 3 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="b396530d-e5cb-4709-9ebf-05c07ccd6457" />
-  </component>
 </module>

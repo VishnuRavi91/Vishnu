@@ -59,7 +59,7 @@ public class Registration extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setDisplayZoomControls(false);
-        webView.loadUrl("https://rayaanaravind.in/beta/Signup/");
+        webView.loadUrl("https://arstudydesk.com/beta/Signup/");
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -106,7 +106,7 @@ public class Registration extends AppCompatActivity {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
-            HttpPost post = new HttpPost("https://rayaanaravind.in/logout/");
+            HttpPost post = new HttpPost("https://arstudydesk.com/logout/");
             post.addHeader("authorization",token);
 
 

@@ -94,7 +94,4 @@
     <orderEntry type="library" name="Gradle: com.squareup.okhttp:okhttp-urlconnection:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: C" level="project" />
   </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="3af1b282-2f7c-451c-a7ff-1231e0762c83" />
-  </component>
 </module>

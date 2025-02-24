@@ -90,8 +90,5 @@
     <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: C" level="project" />
   </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="a5ef0cc7-639f-49e8-84a1-fe61aa6f3d5d" />
-  </component>
   <component name="TestModuleProperties" production-module="StudyDesk.app.main" />
 </module>
