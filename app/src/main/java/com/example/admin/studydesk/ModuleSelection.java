@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,7 +34,9 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
@@ -376,7 +379,12 @@ public class ModuleSelection extends AppCompatActivity {
             }
             if (status.equals("success")){
                 try {
-                    jsonArray = jsonObj.getJSONArray("tutorials");
+                    String tutorials="";
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        tutorials = decodeJWT(jsonObj.getString("tutorials"));
+                    }
+                    JSONObject jsonObject = new JSONObject(tutorials);
+                    jsonArray = jsonObject.getJSONArray("modules");
                     for (int i=0;i<jsonArray.length();i++){
                         list.add(jsonArray.get(i).toString().trim());
                     }
@@ -415,6 +423,22 @@ public class ModuleSelection extends AppCompatActivity {
 
         }
 
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static String decodeJWT(String jwtToken) {
+        try {
+            // Decode the JWT without verifying (if you just want to read the payload)
+            String[] parts = jwtToken.split("\\.");
+            if (parts.length != 3) {
+                return "Invalid JWT Token";
+            }
+
+            // Decode payload (base64 decoding)
+            byte[] decodedBytes = Base64.getUrlDecoder().decode(parts[1]);
+            return new String(decodedBytes, StandardCharsets.UTF_8);
+        } catch (Exception e) {
+            return "Error decoding JWT: " + e.getMessage();
+        }
     }
     public static JSONArray sort(JSONArray array, Comparator c){
         List    asList = new ArrayList(array.length());
