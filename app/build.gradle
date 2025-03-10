@@ -10,15 +10,15 @@ android {
             keyPassword 'arstudydesk'
         }
     }
-    compileSdkVersion 33
+    compileSdkVersion 34
     buildToolsVersion '30.0.3'
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.arstudydesk.admin.studydesk"
         minSdkVersion 17
-        targetSdkVersion 33
-        versionCode 20
-        versionName "20.0"
+        targetSdkVersion 34
+        versionCode 21
+        versionName "21.0"
     }
     buildTypes {
         release {
