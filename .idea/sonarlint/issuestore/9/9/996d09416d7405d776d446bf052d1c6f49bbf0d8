@@ -1,0 +1,170 @@
+
+`	java:S112g"FDefine and throw a dedicated exception instead of using a generic one.(Ãàøüÿÿÿÿ
+J
+java:S3740g"/Provide the parametrized type for this generic.(Ãàøüÿÿÿÿ
+E
+java:S3740o"/Provide the parametrized type for this generic.(Êµ¹
+a
+java:S1192?"FDefine a constant instead of duplicating this literal "TOKEN" 3 times.(ðõœ’ùÿÿÿÿ
+f	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êµ¹
+g	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÙÊž
+g	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÚÖó
+g	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÙÊž
+c	java:S101‚"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ýöŠ’
+g
+java:S2259›"JA "NullPointerException" could be thrown; "stringEntity" is nullable here.(Œûá98œÂœ«Â2
+`
+java:S2259¶"JA "NullPointerException" could be thrown; "stringEntity" is nullable here.(Œûá9
+m
+java:S2259¬"JA "NullPointerException" could be thrown; "responseBody" is nullable here.(Ì¬Ìùøÿÿÿÿ8Âœ«Â2
+f
+java:S2259Ç"JA "NullPointerException" could be thrown; "responseBody" is nullable here.(Ì¬Ìùøÿÿÿÿ
+h
+java:S2259Ñ"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(¿ªýªþÿÿÿÿ8šÂœ«Â2
+h
+java:S2259¶"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(¿ªýªþÿÿÿÿ8êû§ãâ1
+i
+java:S2259¨"FA "NullPointerException" could be thrown; "response" is nullable here.(‡ÿí…øÿÿÿÿ8›Âœ«Â2
+b
+java:S2259Ã"FA "NullPointerException" could be thrown; "response" is nullable here.(‡ÿí…øÿÿÿÿ
+_
+java:S1659'"DDeclare "message" and all following declarations on a separate line.(òË‡¥ÿÿÿÿÿ
+8
+java:S1659)""Declare "last" on a separate line.(ß¨Ýð
+Q
+java:S18742"6Remove this use of "getNetworkInfo"; it is deprecated.(ì¾Ü‰ûÿÿÿÿ
+N
+java:S18742"3Remove this use of "TYPE_MOBILE"; it is deprecated.(ì¾Ü‰ûÿÿÿÿ
+K
+java:S18742"0Remove this use of "getState"; it is deprecated.(ì¾Ü‰ûÿÿÿÿ
+N
+java:S18742"3Remove this use of "NetworkInfo"; it is deprecated.(ì¾Ü‰ûÿÿÿÿ
+H
+java:S18742"-Remove this use of "State"; it is deprecated.(ì¾Ü‰ûÿÿÿÿ
+L
+java:S18742"1Remove this use of "CONNECTED"; it is deprecated.(ì¾Ü‰ûÿÿÿÿ
+Q
+java:S18743"6Remove this use of "getNetworkInfo"; it is deprecated.(ÉþÉ÷ûÿÿÿÿ
+L
+java:S18743"1Remove this use of "TYPE_WIFI"; it is deprecated.(ÉþÉ÷ûÿÿÿÿ
+K
+java:S18743"0Remove this use of "getState"; it is deprecated.(ÉþÉ÷ûÿÿÿÿ
+N
+java:S18743"3Remove this use of "NetworkInfo"; it is deprecated.(ÉþÉ÷ûÿÿÿÿ
+H
+java:S18743"-Remove this use of "State"; it is deprecated.(ÉþÉ÷ûÿÿÿÿ
+L
+java:S18743"1Remove this use of "CONNECTED"; it is deprecated.(ÉþÉ÷ûÿÿÿÿ
+=
+java:S11259"'Remove the unnecessary boolean literal.(£œÊë
+V	java:S125>"<This block of commented-out lines of code should be removed.(£·è’úÿÿÿÿ
+V	java:S125C"<This block of commented-out lines of code should be removed.(°†ü†þÿÿÿÿ
+P
+java:S1161E":Add the "@Override" annotation above this method signature(“–ýþ
+t
+java:S2142H"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+V	java:S125O"<This block of commented-out lines of code should be removed.(°†ü†þÿÿÿÿ
+Q	java:S125Y"<This block of commented-out lines of code should be removed.(‡©Ú«
+Z
+java:S1874["?Remove this use of "FLAG_TRANSLUCENT_STATUS"; it is deprecated.(¿™¡’ûÿÿÿÿ
+F
+java:S1874"/Remove this use of "execute"; it is deprecated.(Ñ—ßÉ
+N
+java:S1135“"2Complete the task associated to this TODO comment.(» æžÿÿÿÿÿ
+M
+java:S1874˜"1Remove this use of "AsyncTask"; it is deprecated.(× ßØøÿÿÿÿ
+W	java:S125Ÿ"<This block of commented-out lines of code should be removed.(‡ÌÊØùÿÿÿÿ
+N
+java:S1874£"2Remove this use of "HttpClient"; it is deprecated.(‹Æ¥ýÿÿÿÿ
+U
+java:S1874£"9Remove this use of "DefaultHttpClient"; it is deprecated.(‹Æ¥ýÿÿÿÿ
+P
+java:S1874¤"4Remove this use of "HttpResponse"; it is deprecated.(Òø±¾þÿÿÿÿ
+L
+java:S1874¦"0Remove this use of "HttpPost"; it is deprecated.(ÅàÀÉùÿÿÿÿ
+L
+java:S1874¦"0Remove this use of "HttpPost"; it is deprecated.(ÅàÀÉùÿÿÿÿ
+K
+java:S1874¯"4Remove this use of "StringEntity"; it is deprecated.(›—½
+J
+java:S1874±"4Remove this use of "StringEntity"; it is deprecated.(­­ò
+P
+java:S1874¶":Remove this use of "setContentEncoding"; it is deprecated.(Œûá9
+R
+java:S1874·"6Remove this use of "setContentType"; it is deprecated.(áÍïýÿÿÿÿ
+M
+java:S1874¸"1Remove this use of "setEntity"; it is deprecated.(Ó£µ·øÿÿÿÿ
+F
+java:S1874»"/Remove this use of "execute"; it is deprecated.(û–ô­
+J
+java:S1874Â"3Remove this use of "EntityUtils"; it is deprecated.(žœÇ
+L
+java:S1874Ã"0Remove this use of "toString"; it is deprecated.(‡ÿí…øÿÿÿÿ
+M
+java:S1874Ã"1Remove this use of "getEntity"; it is deprecated.(‡ÿí…øÿÿÿÿ
+k
+java:S1858Ç"O"responseBody" is already a string, there's no need to call "toString()" on it.(Ì¬Ìùøÿÿÿÿ
+D
+java:S1481Ï"-Remove this unused "Response" local variable.(¯ÙÊž
+W	java:S125Ú"<This block of commented-out lines of code should be removed.(Ä‹‰ÿÿÿÿÿ
+a
+java:S1874ê"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËÐƒ
+?
+java:S1185ê"(Remove this method to simply inherit it.(ËÐƒ
+J
+java:S1874ë"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+R	java:S125ì"<This block of commented-out lines of code should be removed.(íâö·
+a
+java:S1874ð"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874ò"5Remove this use of "onPostExecute"; it is deprecated.(úñ†
+W	java:S125ó"<This block of commented-out lines of code should be removed.(‘ûžŒþÿÿÿÿ
+H
+java:S1874‚"1Remove this use of "AsyncTask"; it is deprecated.(ýöŠ’
+W	java:S125‰"<This block of commented-out lines of code should be removed.(‡ÌÊØùÿÿÿÿ
+N
+java:S1874"2Remove this use of "HttpClient"; it is deprecated.(‹Æ¥ýÿÿÿÿ
+U
+java:S1874"9Remove this use of "DefaultHttpClient"; it is deprecated.(‹Æ¥ýÿÿÿÿ
+P
+java:S1874Ž"4Remove this use of "HttpResponse"; it is deprecated.(Òø±¾þÿÿÿÿ
+L
+java:S1874"0Remove this use of "HttpPost"; it is deprecated.(¡´Õžùÿÿÿÿ
+L
+java:S1874"0Remove this use of "HttpPost"; it is deprecated.(¡´Õžùÿÿÿÿ
+H
+java:S1874‘"1Remove this use of "addHeader"; it is deprecated.(„ÓÄ¨
+K
+java:S1874”"4Remove this use of "StringEntity"; it is deprecated.(›—½
+J
+java:S1874–"4Remove this use of "StringEntity"; it is deprecated.(­­ò
+P
+java:S1874›":Remove this use of "setContentEncoding"; it is deprecated.(Œûá9
+R
+java:S1874œ"6Remove this use of "setContentType"; it is deprecated.(áÍïýÿÿÿÿ
+M
+java:S1874"1Remove this use of "setEntity"; it is deprecated.(Ó£µ·øÿÿÿÿ
+F
+java:S1874 "/Remove this use of "execute"; it is deprecated.(û–ô­
+J
+java:S1874§"3Remove this use of "EntityUtils"; it is deprecated.(žœÇ
+L
+java:S1874¨"0Remove this use of "toString"; it is deprecated.(‡ÿí…øÿÿÿÿ
+M
+java:S1874¨"1Remove this use of "getEntity"; it is deprecated.(‡ÿí…øÿÿÿÿ
+k
+java:S1858¬"O"responseBody" is already a string, there's no need to call "toString()" on it.(Ì¬Ìùøÿÿÿÿ
+D
+java:S1481´"-Remove this unused "Response" local variable.(¯ÙÊž
+a
+java:S1874Ä"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËÐƒ
+?
+java:S1185Ä"(Remove this method to simply inherit it.(ËÐƒ
+J
+java:S1874Å"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+R	java:S125Æ"<This block of commented-out lines of code should be removed.(íâö·
+a
+java:S1874Ê"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874Ì"5Remove this use of "onPostExecute"; it is deprecated.(úñ†
+W	java:S125Í"<This block of commented-out lines of code should be removed.(‘ûžŒþÿÿÿÿ

@@ -1,0 +1,47 @@
+
+t
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(òÊØûÿÿÿÿ
+P
+java:S1141n"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+P
+java:S1141s"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+P
+java:S1141y"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+>
+java:S1604;"(Make this anonymous inner class a lambda(ÓÉŠ
+k
+java:S1104)"PMake list a static final constant or non-public and provide accessors if needed.(òÊØûÿÿÿÿ
+E
+java:S1444)"*Make this "public static list" field final(òÊØûÿÿÿÿ
+g
+java:S2259t"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(ã£ì¡úÿÿÿÿ8ìù§ãâ1
+`
+java:S1659("EDeclare "btnSNCST" and all following declarations on a separate line.(ã¿’‡şÿÿÿÿ
+m
+java:S1450."WRemove the "response" field and declare it as a local variable in the relevant methods.(äÖ–
+8
+java:S2386)"Make this member "protected".(òÊØûÿÿÿÿ
+V	java:S1255"<This block of commented-out lines of code should be removed.(Û™¨¿şÿÿÿÿ
+E
+java:S1874:"/Remove this use of "execute"; it is deprecated.(Ñ—ßÉ
+V	java:S125B"<This block of commented-out lines of code should be removed.(•¿ãâúÿÿÿÿ
+Z
+java:S1874Z"?Remove this use of "FLAG_TRANSLUCENT_STATUS"; it is deprecated.(¿™¡’ûÿÿÿÿ
+V	java:S125_"<This block of commented-out lines of code should be removed.(±¡“¢üÿÿÿÿ
+M
+java:S1874b"0Remove this use of "getColor"; it is deprecated.(ïŠŒ©8‡ú§ãâ1
+P	java:S125l"<This block of commented-out lines of code should be removed.(ƒ‚‚v
+M
+java:S1874„"1Remove this use of "AsyncTask"; it is deprecated.(× ßØøÿÿÿÿ
+M
+java:S1874‹"6Remove this use of "ProgressDialog"; it is deprecated.(ÆŒ®ñ
+M
+java:S1874‹"6Remove this use of "ProgressDialog"; it is deprecated.(ÆŒ®ñ
+a
+java:S1874“"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËĞƒ
+J
+java:S1874”"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+a
+java:S1874™"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874›"5Remove this use of "onPostExecute"; it is deprecated.(úñ†

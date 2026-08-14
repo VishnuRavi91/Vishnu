@@ -1,0 +1,21 @@
+
+T
+java:S3516"9Refactor this method to not always return the same value.(µÛÎ°üÿÿÿÿ
+L
+java:S1172"6Remove these unused method parameters "view", "event".(ÑÉ”ú
+e
+java:S1874"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(µÛÎ°üÿÿÿÿ
+U
+java:S1161":Add the "@Override" annotation above this method signature(µÛÎ°üÿÿÿÿ
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(à¹°Ôüÿÿÿÿ
+V	java:S125!"<This block of commented-out lines of code should be removed.(š©…Ñùÿÿÿÿ
+J
+java:S1128"4Remove this unused import 'android.content.Context'.(©Ê‰è
+G
+java:S1128",Remove this unused import 'android.net.Uri'.(òêû‘ýÿÿÿÿ
+I
+java:S1128"3Remove this unused import 'android.view.ViewGroup'.(‹îá
+U
+java:S1128
+":Remove this unused import 'android.widget.RelativeLayout'.(ü¯ðõþÿÿÿÿ

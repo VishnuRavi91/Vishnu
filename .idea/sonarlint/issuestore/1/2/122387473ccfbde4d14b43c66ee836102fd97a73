@@ -1,0 +1,240 @@
+
+m
+java:S1192Î"QDefine a constant instead of duplicating this literal "application/json" 3 times.(áÍïıÿÿÿÿ
+\
+java:S1192Í"FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(Œûá9
+_
+java:S1192ú"HDefine a constant instead of duplicating this literal "message" 3 times.(Â‰Õ«
+]
+java:S1192·"FDefine a constant instead of duplicating this literal "email" 3 times.(‡ÂÏø
+c
+java:S1192è"GDefine a constant instead of duplicating this literal "status" 3 times.(¿ªıªşÿÿÿÿ
+g	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÙÊ
+g	java:S117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÙÊ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÚÖó
+g	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÙÊ
+>
+java:S1604N"(Make this anonymous inner class a lambda(ãêƒÛ
+C
+java:S1604Y"(Make this anonymous inner class a lambda(Ã¦í±ûÿÿÿÿ
+>
+java:S1604_"(Make this anonymous inner class a lambda(ğ…—
+>
+java:S1604f"(Make this anonymous inner class a lambda(Ïİ¯
+>
+java:S1604p"(Make this anonymous inner class a lambda(Œš¿Á
+h
+java:S11042"RMake shadow a static final constant or non-public and provide accessors if needed.(¦şÃ©
+h
+java:S11043"RMake screen a static final constant or non-public and provide accessors if needed.(À–Ñ
+B
+java:S14442",Make this "public static shadow" field final(¦şÃ©
+B
+java:S14443",Make this "public static screen" field final(À–Ñ
+c	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(—¥ÄÕ
+c	java:S101ı"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ıöŠ’
+i
+java:S2259Ì"FA "NullPointerException" could be thrown; "response" is nullable here.(‡ÿí…øÿÿÿÿ8åˆ¨ãâ1
+b
+java:S2259Ú"FA "NullPointerException" could be thrown; "response" is nullable here.(‡ÿí…øÿÿÿÿ
+h
+java:S2259Ú"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(¿ªıªşÿÿÿÿ8äˆ¨ãâ1
+a
+java:S2259±"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(¿ªıªşÿÿÿÿ
+a
+java:S2259è"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(¿ªıªşÿÿÿÿ
+`
+java:S2259–"JA "NullPointerException" could be thrown; "stringEntity" is nullable here.(Œûá9
+`
+java:S2259Í"JA "NullPointerException" could be thrown; "stringEntity" is nullable here.(Œûá9
+i
+java:S2259£"FA "NullPointerException" could be thrown; "response" is nullable here.(‡ÿí…øÿÿÿÿ8éº»Ä1
+m
+java:S2259§"JA "NullPointerException" could be thrown; "responseBody" is nullable here.(Ì¬Ìùøÿÿÿÿ8åˆ¨ãâ1
+g
+java:S2259¿"JA "NullPointerException" could be thrown; "stringEntity" is nullable here.(Œûá98åˆ¨ãâ1
+f
+java:S2259Ş"JA "NullPointerException" could be thrown; "responseBody" is nullable here.(Ì¬Ìùøÿÿÿÿ
+m
+java:S2259Ğ"JA "NullPointerException" could be thrown; "responseBody" is nullable here.(Ì¬Ìùøÿÿÿÿ8éº»Ä1
+h	java:S1160"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—°°ıøÿÿÿÿ
+o	java:S1165"URename this field "ETusername" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ«˜¾ıÿÿÿÿ
+o	java:S1166"URename this field "ETpassword" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ”Ÿùÿÿÿÿ
+h	java:S1167"SRename this field "BtnLogin" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜µÅ×
+<
+java:S16599"&Declare "tvForgot" on a separate line.(¼åÈ‹
+V
+java:S1854B"@Remove this useless assignment to local variable "requestQueue".(ŸÔÃ
+Z
+java:S1854@"?Remove this useless assignment to local variable "buttonClick".( ³Œıÿÿÿÿ
+K
+java:S1481@"0Remove this unused "buttonClick" local variable.( ³Œıÿÿÿÿ
+G
+java:S1481B"1Remove this unused "requestQueue" local variable.(ŸÔÃ
+S
+java:S2696T"6Make the enclosing method "static" or remove this set.(èÛ¤Ş8÷ˆ¨ãâ1
+V	java:S125Q"<This block of commented-out lines of code should be removed.(ü¶ìÊÿÿÿÿÿ
+E
+java:S1874\"/Remove this use of "execute"; it is deprecated.(˜êÌ
+E
+java:S1874b"/Remove this use of "execute"; it is deprecated.(‹©ö¤
+Z
+java:S1874~"?Remove this use of "FLAG_TRANSLUCENT_STATUS"; it is deprecated.(¿™¡’ûÿÿÿÿ
+D
+java:S1185Š"(Remove this method to simply inherit it.(èüù±ùÿÿÿÿ
+?
+java:S1185"(Remove this method to simply inherit it.(ÍÙ÷¢
+f
+java:S1874—"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ
+D
+java:S1185—"(Remove this method to simply inherit it.(œƒƒ©ùÿÿÿÿ
+W	java:S125˜"<This block of commented-out lines of code should be removed.(Àµ®ãüÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(Êşÿò
+n	java:S116¥"SRename this field "Username" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¤Áşÿÿÿÿ
+i	java:S116¦"SRename this field "Password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İóß¼
+M
+java:S1874£"1Remove this use of "AsyncTask"; it is deprecated.(× ßØøÿÿÿÿ
+M
+java:S1874¬"6Remove this use of "ProgressDialog"; it is deprecated.(°ëåı
+M
+java:S1874¬"6Remove this use of "ProgressDialog"; it is deprecated.(°ëåı
+N
+java:S1874°"2Remove this use of "HttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+U
+java:S1874°"9Remove this use of "DefaultHttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+P
+java:S1874±"4Remove this use of "HttpResponse"; it is deprecated.(Òø±¾şÿÿÿÿ
+L
+java:S1874³"0Remove this use of "HttpPost"; it is deprecated.(Ï˜‰úùÿÿÿÿ
+L
+java:S1874³"0Remove this use of "HttpPost"; it is deprecated.(Ï˜‰úùÿÿÿÿ
+K
+java:S1874Æ"4Remove this use of "StringEntity"; it is deprecated.(›—½
+J
+java:S1874È"4Remove this use of "StringEntity"; it is deprecated.(­­ò
+P
+java:S1874Í":Remove this use of "setContentEncoding"; it is deprecated.(Œûá9
+R
+java:S1874Î"6Remove this use of "setContentType"; it is deprecated.(áÍïıÿÿÿÿ
+M
+java:S1874Ï"1Remove this use of "setEntity"; it is deprecated.(Ó£µ·øÿÿÿÿ
+F
+java:S1874Ò"/Remove this use of "execute"; it is deprecated.(û–ô­
+J
+java:S1874Ù"3Remove this use of "EntityUtils"; it is deprecated.(œÇ
+L
+java:S1874Ú"0Remove this use of "toString"; it is deprecated.(‡ÿí…øÿÿÿÿ
+M
+java:S1874Ú"1Remove this use of "getEntity"; it is deprecated.(‡ÿí…øÿÿÿÿ
+k
+java:S1858Ş"O"responseBody" is already a string, there's no need to call "toString()" on it.(Ì¬Ìùøÿÿÿÿ
+D
+java:S1481æ"-Remove this unused "Response" local variable.(¯ÙÊ
+T
+java:S2696ñ"6Make the enclosing method "static" or remove this set.(Ä“›8Œ‰¨ãâ1
+Q	java:S125ğ"<This block of commented-out lines of code should be removed.(¯œb
+a
+java:S1874‚"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËĞƒ
+J
+java:S1874ƒ"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+a
+java:S1874ˆ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874Š"5Remove this use of "onPostExecute"; it is deprecated.(úñ†
+W	java:S125Œ"<This block of commented-out lines of code should be removed.(•››úøÿÿÿÿ
+n	java:S116 "SRename this field "Username" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¤Áşÿÿÿÿ
+H
+java:S1874"1Remove this use of "AsyncTask"; it is deprecated.(—¥ÄÕ
+M
+java:S1874¦"6Remove this use of "ProgressDialog"; it is deprecated.(°ëåı
+M
+java:S1874¦"6Remove this use of "ProgressDialog"; it is deprecated.(°ëåı
+N
+java:S1874ª"2Remove this use of "HttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+U
+java:S1874ª"9Remove this use of "DefaultHttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+P
+java:S1874«"4Remove this use of "HttpResponse"; it is deprecated.(Òø±¾şÿÿÿÿ
+L
+java:S1874­"0Remove this use of "HttpPost"; it is deprecated.(‘èÓ’úÿÿÿÿ
+L
+java:S1874­"0Remove this use of "HttpPost"; it is deprecated.(‘èÓ’úÿÿÿÿ
+K
+java:S1874¸"4Remove this use of "StringEntity"; it is deprecated.(›—½
+J
+java:S1874º"4Remove this use of "StringEntity"; it is deprecated.(­­ò
+P
+java:S1874¿":Remove this use of "setContentEncoding"; it is deprecated.(Œûá9
+R
+java:S1874À"6Remove this use of "setContentType"; it is deprecated.(áÍïıÿÿÿÿ
+M
+java:S1874Á"1Remove this use of "setEntity"; it is deprecated.(Ó£µ·øÿÿÿÿ
+F
+java:S1874Ä"/Remove this use of "execute"; it is deprecated.(û–ô­
+J
+java:S1874Ë"3Remove this use of "EntityUtils"; it is deprecated.(œÇ
+L
+java:S1874Ì"0Remove this use of "toString"; it is deprecated.(‡ÿí…øÿÿÿÿ
+M
+java:S1874Ì"1Remove this use of "getEntity"; it is deprecated.(‡ÿí…øÿÿÿÿ
+k
+java:S1858Ğ"O"responseBody" is already a string, there's no need to call "toString()" on it.(Ì¬Ìùøÿÿÿÿ
+D
+java:S1481Ø"-Remove this unused "Response" local variable.(¯ÙÊ
+a
+java:S1874è"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËĞƒ
+J
+java:S1874é"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+a
+java:S1874î"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874ğ"5Remove this use of "onPostExecute"; it is deprecated.(úñ†
+H
+java:S1874ı"1Remove this use of "AsyncTask"; it is deprecated.(ıöŠ’
+M
+java:S1874„"6Remove this use of "ProgressDialog"; it is deprecated.(°ëåı
+M
+java:S1874„"6Remove this use of "ProgressDialog"; it is deprecated.(°ëåı
+N
+java:S1874ˆ"2Remove this use of "HttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+U
+java:S1874ˆ"9Remove this use of "DefaultHttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+P
+java:S1874‰"4Remove this use of "HttpResponse"; it is deprecated.(Òø±¾şÿÿÿÿ
+L
+java:S1874‹"0Remove this use of "HttpPost"; it is deprecated.(¡´Õùÿÿÿÿ
+L
+java:S1874‹"0Remove this use of "HttpPost"; it is deprecated.(¡´Õùÿÿÿÿ
+H
+java:S1874Œ"1Remove this use of "addHeader"; it is deprecated.(„ÓÄ¨
+K
+java:S1874"4Remove this use of "StringEntity"; it is deprecated.(›—½
+J
+java:S1874‘"4Remove this use of "StringEntity"; it is deprecated.(­­ò
+P
+java:S1874–":Remove this use of "setContentEncoding"; it is deprecated.(Œûá9
+R
+java:S1874—"6Remove this use of "setContentType"; it is deprecated.(áÍïıÿÿÿÿ
+M
+java:S1874˜"1Remove this use of "setEntity"; it is deprecated.(Ó£µ·øÿÿÿÿ
+F
+java:S1874›"/Remove this use of "execute"; it is deprecated.(û–ô­
+J
+java:S1874¢"3Remove this use of "EntityUtils"; it is deprecated.(œÇ
+L
+java:S1874£"0Remove this use of "toString"; it is deprecated.(‡ÿí…øÿÿÿÿ
+M
+java:S1874£"1Remove this use of "getEntity"; it is deprecated.(‡ÿí…øÿÿÿÿ
+k
+java:S1858§"O"responseBody" is already a string, there's no need to call "toString()" on it.(Ì¬Ìùøÿÿÿÿ
+D
+java:S1481¯"-Remove this unused "Response" local variable.(¯ÙÊ
+a
+java:S1874¿"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËĞƒ
+J
+java:S1874À"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+a
+java:S1874Å"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874Ç"5Remove this use of "onPostExecute"; it is deprecated.(úñ†
+W	java:S125É"<This block of commented-out lines of code should be removed.(•››úøÿÿÿÿ

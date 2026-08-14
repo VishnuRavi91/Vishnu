@@ -1,0 +1,77 @@
+
+f	java:S117c"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÚÖó
+g	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÙÊ
+b	java:S101_"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ıöŠ’
+_
+java:S2259x"JA "NullPointerException" could be thrown; "stringEntity" is nullable here.(Œûá9
+a
+java:S2259“"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(¿ªıªşÿÿÿÿ
+f
+java:S2259‰"JA "NullPointerException" could be thrown; "responseBody" is nullable here.(Ì¬Ìùøÿÿÿÿ
+b
+java:S2259…"FA "NullPointerException" could be thrown; "response" is nullable here.(‡ÿí…øÿÿÿÿ
+Q
+java:S1874'"6Remove this use of "ProgressDialog"; it is deprecated.(ÿ¢ÿÿÿÿÿ
+Z
+java:S1874/"?Remove this use of "FLAG_TRANSLUCENT_STATUS"; it is deprecated.(¿™¡’ûÿÿÿÿ
+M
+java:S18747"0Remove this use of "getColor"; it is deprecated.(ñ˜Èê8¦ú›èÂ2
+L
+java:S1874C"6Remove this use of "ProgressDialog"; it is deprecated.(—İ‹
+H
+java:S1874D"2Remove this use of "setMessage"; it is deprecated.(×‘ÁÕ
+e
+java:S1874Q"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ò±¢üÿÿÿÿ
+J
+java:S1185V"(Remove this method to simply inherit it.(èüù±ùÿÿÿÿ8«ú›èÂ2
+E
+java:S1185["(Remove this method to simply inherit it.(ÍÙ÷¢8¬ú›èÂ2
+G
+java:S1874_"1Remove this use of "AsyncTask"; it is deprecated.(ıöŠ’
+L
+java:S1874f"6Remove this use of "ProgressDialog"; it is deprecated.(›Õ†ğ
+L
+java:S1874f"6Remove this use of "ProgressDialog"; it is deprecated.(›Õ†ğ
+M
+java:S1874j"2Remove this use of "HttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+T
+java:S1874j"9Remove this use of "DefaultHttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+O
+java:S1874k"4Remove this use of "HttpResponse"; it is deprecated.(Òø±¾şÿÿÿÿ
+F
+java:S1874m"0Remove this use of "HttpPost"; it is deprecated.(Ä¥™Ğ
+F
+java:S1874m"0Remove this use of "HttpPost"; it is deprecated.(Ä¥™Ğ
+G
+java:S1874n"1Remove this use of "addHeader"; it is deprecated.(„ÓÄ¨
+J
+java:S1874q"4Remove this use of "StringEntity"; it is deprecated.(›—½
+I
+java:S1874s"4Remove this use of "StringEntity"; it is deprecated.(­­ò
+O
+java:S1874x":Remove this use of "setContentEncoding"; it is deprecated.(Œûá9
+Q
+java:S1874y"6Remove this use of "setContentType"; it is deprecated.(áÍïıÿÿÿÿ
+L
+java:S1874z"1Remove this use of "setEntity"; it is deprecated.(Ó£µ·øÿÿÿÿ
+E
+java:S1874}"/Remove this use of "execute"; it is deprecated.(û–ô­
+J
+java:S1874„"3Remove this use of "EntityUtils"; it is deprecated.(œÇ
+L
+java:S1874…"0Remove this use of "toString"; it is deprecated.(‡ÿí…øÿÿÿÿ
+M
+java:S1874…"1Remove this use of "getEntity"; it is deprecated.(‡ÿí…øÿÿÿÿ
+k
+java:S1858‰"O"responseBody" is already a string, there's no need to call "toString()" on it.(Ì¬Ìùøÿÿÿÿ
+D
+java:S1481‘"-Remove this unused "Response" local variable.(¯ÙÊ
+a
+java:S1874¡"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËĞƒ
+J
+java:S1874¢"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+a
+java:S1874§"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874©"5Remove this use of "onPostExecute"; it is deprecated.(úñ†
+W	java:S125«"<This block of commented-out lines of code should be removed.(•››úøÿÿÿÿ

@@ -120,8 +120,8 @@ public class Second extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-                WindowManager.LayoutParams.FLAG_SECURE);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+//                WindowManager.LayoutParams.FLAG_SECURE);
         Window window =getWindow();
 
 // clear FLAG_TRANSLUCENT_STATUS flag:

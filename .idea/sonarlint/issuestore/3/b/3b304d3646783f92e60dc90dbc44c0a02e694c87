@@ -1,0 +1,145 @@
+
+a	java:S112×"FDefine and throw a dedicated exception instead of using a generic one.(Ãàøüÿÿÿÿ
+K
+java:S3740×"/Provide the parametrized type for this generic.(Ãàøüÿÿÿÿ
+F
+java:S3740ß"/Provide the parametrized type for this generic.(Êµ¹
+R
+java:S3740›"/Provide the parametrized type for this generic.(ªóİùÿÿÿÿ8ãï§­Â2
+g	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Êµ¹
+g	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÎÌÒ
+g	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ÙÊ
+E
+java:S1604D"(Make this anonymous inner class a lambda(©˜÷Ï8Š«œ«Â2
+C
+java:S1604`"(Make this anonymous inner class a lambda(ıöÛıÿÿÿÿ
+=
+java:S1604j"(Make this anonymous inner class a lambda(ôâ¥H
+C
+java:S1604r"(Make this anonymous inner class a lambda(Ùñ‚Éûÿÿÿÿ
+?
+java:S1604‘"(Make this anonymous inner class a lambda(ï…ÂÖ
+D
+java:S1604™"(Make this anonymous inner class a lambda(¡ÚŞúûÿÿÿÿ
+D
+java:S1604¥"(Make this anonymous inner class a lambda(®¸ïÿÿÿÿÿ
+D
+java:S1604±"(Make this anonymous inner class a lambda(Öú£Îúÿÿÿÿ
+?
+java:S1604¹"(Make this anonymous inner class a lambda(ßóàš
+?
+java:S1604Ç"(Make this anonymous inner class a lambda(Ê‘ŠÎ
+?
+java:S1604‹"(Make this anonymous inner class a lambda(„ÑñŒ
+E
+java:S5411P"(Use a primitive boolean expression here.(×Ìíˆ8–«œ«Â2
+h
+java:S2259à"EA "NullPointerException" could be thrown; "jsonObj" is nullable here.(¿ªıªşÿÿÿÿ8„­œ«Â2
+m
+java:S2259Ö"JA "NullPointerException" could be thrown; "responseBody" is nullable here.(Ì¬Ìùøÿÿÿÿ8…­œ«Â2
+i
+java:S2259Ò"FA "NullPointerException" could be thrown; "response" is nullable here.(‡ÿí…øÿÿÿÿ8†­œ«Â2
+g
+java:S2259Å"JA "NullPointerException" could be thrown; "stringEntity" is nullable here.(Œûá98ƒ­œ«Â2
+b
+java:S1659,"GDeclare "btnRegUser" and all following declarations on a separate line.(€ÿùìıÿÿÿÿ
+Z
+java:S1659-"DDeclare "message" and all following declarations on a separate line.(ğ½ùÁ
+?
+java:S1659."$Declare "btnFAQ" on a separate line.(ñ–¼“şÿÿÿÿ
+´
+java:S6548+"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(åÚ’øÿÿÿÿ
+L
+java:S18548"6Remove this useless assignment to local variable "tm".(Ä³ØÊ
+Z
+java:S18547"DRemove this useless assignment to local variable "telephonyManager".(¶—¥­
+K
+java:S14817"5Remove this unused "telephonyManager" local variable.(¶—¥­
+=
+java:S14818"'Remove this unused "tm" local variable.(Ä³ØÊ
+V	java:S1259"<This block of commented-out lines of code should be removed.(âÑ¼Áùÿÿÿÿ
+>	java:S108J")Either remove or fill this block of code.(å¥‡
+Q
+java:S2696O"6Make the enclosing method "static" or remove this set.(û€Ì›ùÿÿÿÿ
+V	java:S125Z"<This block of commented-out lines of code should be removed.(ò¢³µüÿÿÿÿ
+S
+java:S2696c"6Make the enclosing method "static" or remove this set.(¥ç¸8Ú¨ãâ1
+X
+java:S2696d"6Make the enclosing method "static" or remove this set.(ûß™Çúÿÿÿÿ8Û¨ãâ1
+X
+java:S2696u"6Make the enclosing method "static" or remove this set.(É¤£™üÿÿÿÿ8ç¨ãâ1
+X
+java:S2696v"6Make the enclosing method "static" or remove this set.(ûß™Çúÿÿÿÿ8ç¨ãâ1
+[
+java:S1874€"?Remove this use of "FLAG_TRANSLUCENT_STATUS"; it is deprecated.(¿™¡’ûÿÿÿÿ
+W	java:S125…"<This block of commented-out lines of code should be removed.(±¡“¢üÿÿÿÿ
+N
+java:S1874ˆ"0Remove this use of "getColor"; it is deprecated.(ïŠŒ©8ü­œ«Â2
+R	java:S125Š"<This block of commented-out lines of code should be removed.(ĞÔã±
+R	java:S125”"<This block of commented-out lines of code should be removed.(ÅÕ¦è
+F
+java:S1874–"/Remove this use of "execute"; it is deprecated.(Ñ—ßÉ
+T
+java:S2696œ"6Make the enclosing method "static" or remove this set.(ˆÈáë8ğ¨ãâ1
+W	java:S125Ÿ"<This block of commented-out lines of code should be removed.(«ÌÊùÿÿÿÿ
+T
+java:S2696¨"6Make the enclosing method "static" or remove this set.(ğÃÕ¯8ò¨ãâ1
+R	java:S125«"<This block of commented-out lines of code should be removed.(Çó«‘
+W	java:S125¼"<This block of commented-out lines of code should be removed.(±¥Â¬ÿÿÿÿÿ
+R	java:S125¿"<This block of commented-out lines of code should be removed.(¾”ğì
+W	java:S125Ê"<This block of commented-out lines of code should be removed.(¹ëÍÅüÿÿÿÿ
+R	java:S125Í"<This block of commented-out lines of code should be removed.(ŞËÄÇ
+P
+java:S1874â"9Remove this use of "getDefaultAdapter"; it is deprecated.(çÎÌÒ
+m
+java:S1874ƒ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ8®®œ«Â2
+F
+java:S1874‹"/Remove this use of "Handler"; it is deprecated.(„ÑñŒ
+M
+java:S1874¥"1Remove this use of "AsyncTask"; it is deprecated.(× ßØøÿÿÿÿ
+M
+java:S1874®"6Remove this use of "ProgressDialog"; it is deprecated.(»ï„
+M
+java:S1874®"6Remove this use of "ProgressDialog"; it is deprecated.(»ï„
+N
+java:S1874±"2Remove this use of "HttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+U
+java:S1874±"9Remove this use of "DefaultHttpClient"; it is deprecated.(‹Æ¥ıÿÿÿÿ
+P
+java:S1874²"4Remove this use of "HttpResponse"; it is deprecated.(Òø±¾şÿÿÿÿ
+L
+java:S1874´"0Remove this use of "HttpPost"; it is deprecated.(ÅàÀÉùÿÿÿÿ
+L
+java:S1874´"0Remove this use of "HttpPost"; it is deprecated.(ÅàÀÉùÿÿÿÿ
+K
+java:S1874¾"4Remove this use of "StringEntity"; it is deprecated.(›—½
+J
+java:S1874À"4Remove this use of "StringEntity"; it is deprecated.(­­ò
+P
+java:S1874Å":Remove this use of "setContentEncoding"; it is deprecated.(Œûá9
+R
+java:S1874Æ"6Remove this use of "setContentType"; it is deprecated.(áÍïıÿÿÿÿ
+M
+java:S1874Ç"1Remove this use of "setEntity"; it is deprecated.(Ó£µ·øÿÿÿÿ
+F
+java:S1874Ê"/Remove this use of "execute"; it is deprecated.(û–ô­
+J
+java:S1874Ñ"3Remove this use of "EntityUtils"; it is deprecated.(œÇ
+L
+java:S1874Ò"0Remove this use of "toString"; it is deprecated.(‡ÿí…øÿÿÿÿ
+M
+java:S1874Ò"1Remove this use of "getEntity"; it is deprecated.(‡ÿí…øÿÿÿÿ
+k
+java:S1858Ö"O"responseBody" is already a string, there's no need to call "toString()" on it.(Ì¬Ìùøÿÿÿÿ
+D
+java:S1481Ş"-Remove this unused "Response" local variable.(¯ÙÊ
+W	java:S125é"<This block of commented-out lines of code should be removed.(Ä‹‰ÿÿÿÿÿ
+a
+java:S1874ú"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ËĞƒ
+J
+java:S1874û"4Remove this use of "onPreExecute"; it is deprecated.(”•P
+a
+java:S1874€"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¡Øæø
+K
+java:S1874‚"5Remove this use of "onPostExecute"; it is deprecated.(úñ†
+W	java:S125„"<This block of commented-out lines of code should be removed.(•››úøÿÿÿÿ

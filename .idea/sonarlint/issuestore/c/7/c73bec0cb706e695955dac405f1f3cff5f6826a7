@@ -1,0 +1,55 @@
+
+n
+java:S2293!"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖÅ¢`
+C
+java:S1604?"(Make this anonymous inner class a lambda(„œ¾ªûÿÿÿÿ
+>
+java:S1604H"(Make this anonymous inner class a lambda(žÀˆ¸
+>
+java:S1604Q"(Make this anonymous inner class a lambda(Ú«¸£
+z
+java:S14882"dImmediately return this expression instead of assigning it to the temporary variable "myViewHolder".(¬åÑ×
+j
+java:S1104"TMake mcontext a static final constant or non-public and provide accessors if needed.(Ç¹é¹
+l
+java:S1104"QMake List1 a static final constant or non-public and provide accessors if needed.(µâöôþÿÿÿÿ
+e
+java:S1104!"PMake list a static final constant or non-public and provide accessors if needed.(ÖÅ¢`
+h
+java:S1104c"RMake Module a static final constant or non-public and provide accessors if needed.(Â„ºÂ
+f
+java:S1104c"PMake link a static final constant or non-public and provide accessors if needed.(Â„ºÂ
+l
+java:S1104c"VMake friendlink a static final constant or non-public and provide accessors if needed.(Â„ºÂ
+g
+java:S1104c"QMake sdsso a static final constant or non-public and provide accessors if needed.(Â„ºÂ
+h
+java:S1104d"RMake btnRef a static final constant or non-public and provide accessors if needed.(–ø—™
+j
+java:S1104d"TMake btnOffer a static final constant or non-public and provide accessors if needed.(–ø—™
+j
+java:S1104d"TMake btnSDSSO a static final constant or non-public and provide accessors if needed.(–ø—™
+i	java:S116"TRename this field "list_item" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆŒÐŠ
+j	java:S116"PRename this field "List1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µâöôþÿÿÿÿ
+?
+java:S1659 "$Declare "delete" on a separate line.(ÃÒ¼’øÿÿÿÿ
+n
+java:S1450"YRemove the "jsonObject" field and declare it as a local variable in the relevant methods.(ËÅÀu
+S
+java:S2696B"6Make the enclosing method "static" or remove this set.(­ÏðŸ8³Ž¨ãâ1
+X
+java:S2696C"6Make the enclosing method "static" or remove this set.(ûß™Çúÿÿÿÿ8´Ž¨ãâ1
+X
+java:S2696K"6Make the enclosing method "static" or remove this set.(þµ÷³üÿÿÿÿ8»Ž¨ãâ1
+X
+java:S2696L"6Make the enclosing method "static" or remove this set.(ûß™Çúÿÿÿÿ8»Ž¨ãâ1
+X
+java:S2696V"6Make the enclosing method "static" or remove this set.(‘åõ‘üÿÿÿÿ8¼Ž¨ãâ1
+V	java:S125T"<This block of commented-out lines of code should be removed.(™ßääøÿÿÿÿ
+X
+java:S2696W"6Make the enclosing method "static" or remove this set.(ûß™Çúÿÿÿÿ8½Ž¨ãâ1
+f	java:S116c"QRename this field "Module" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â„ºÂ
+W
+java:S1659c"ADeclare "link" and all following declarations on a separate line.(Â„ºÂ
+[
+java:S1659d"EDeclare "btnOffer" and all following declarations on a separate line.(–ø—™

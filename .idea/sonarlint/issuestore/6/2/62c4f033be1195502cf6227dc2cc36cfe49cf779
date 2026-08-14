@@ -1,0 +1,40 @@
+
+>
+java:S16048"(Make this anonymous inner class a lambda(ÓÉŠ
+?
+java:S1604¢"(Make this anonymous inner class a lambda(Î¬¯”
+?
+java:S1604¼"(Make this anonymous inner class a lambda(„ÑñŒ
+k
+java:S1104*"PMake link a static final constant or non-public and provide accessors if needed.(´¨´Ùøÿÿÿÿ
+k
+java:S1104,"PMake demo a static final constant or non-public and provide accessors if needed.(¶ËÔÔûÿÿÿÿ
+E
+java:S1444*"*Make this "public static link" field final(´¨´Ùøÿÿÿÿ
+E
+java:S1444,"*Make this "public static demo" field final(¶ËÔÔûÿÿÿÿ
+Q
+java:S1874."6Remove this use of "ProgressDialog"; it is deprecated.(ÿ¢ÿÿÿÿÿ
+V	java:S125@"<This block of commented-out lines of code should be removed.(è¡èúøÿÿÿÿ
+Z
+java:S1874D"?Remove this use of "FLAG_TRANSLUCENT_STATUS"; it is deprecated.(¿™¡’ûÿÿÿÿ
+V	java:S125I"<This block of commented-out lines of code should be removed.(±¡“¢üÿÿÿÿ
+F
+java:S1874L"0Remove this use of "getColor"; it is deprecated.(ïŠŒ©
+V	java:S125Y"<This block of commented-out lines of code should be removed.(‡ŞÒ„ÿÿÿÿÿ
+L
+java:S1874u"6Remove this use of "ProgressDialog"; it is deprecated.(ª¡®
+H
+java:S1874v"2Remove this use of "setMessage"; it is deprecated.(×‘ÁÕ
+f
+java:S1874„"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ò±¢üÿÿÿÿ
+W	java:S125Œ"<This block of commented-out lines of code should be removed.(¿£ú½ùÿÿÿÿ
+f
+java:S1874™"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ
+W	java:S125š"<This block of commented-out lines of code should be removed.(ò¬Êıÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(™’Éœ
+R	java:S125¬"<This block of commented-out lines of code should be removed.(ÇİÌ
+W	java:S125®"<This block of commented-out lines of code should be removed.( ĞÙ÷ÿÿÿÿÿ
+W	java:S125±"<This block of commented-out lines of code should be removed.(£ë”àıÿÿÿÿ
+F
+java:S1874¼"/Remove this use of "Handler"; it is deprecated.(„ÑñŒ

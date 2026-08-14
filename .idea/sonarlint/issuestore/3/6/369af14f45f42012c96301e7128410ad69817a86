@@ -1,0 +1,22 @@
+
+l	java:S117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆãğ8ÒèÕàâ1
+E
+java:S1604."(Make this anonymous inner class a lambda(ÓÉŠ8ÔèÕàâ1
+E
+java:S16048"(Make this anonymous inner class a lambda(²®”Â8ÔèÕàâ1
+J
+java:S1604>"(Make this anonymous inner class a lambda(‘Ê“üÿÿÿÿ8ÔèÕàâ1
+E
+java:S1604F"(Make this anonymous inner class a lambda(Ëí¬Å8ÔèÕàâ1
+f
+java:S1659"DDeclare "btncall" and all following declarations on a separate line.(ÖÉ‘ªşÿÿÿÿ8àéÕàâ1
+]	java:S125"<This block of commented-out lines of code should be removed.(è¡èúøÿÿÿÿ8ééÕàâ1
+a
+java:S1874#"?Remove this use of "FLAG_TRANSLUCENT_STATUS"; it is deprecated.(¿™¡’ûÿÿÿÿ8êéÕàâ1
+]	java:S125("<This block of commented-out lines of code should be removed.(±¡“¢üÿÿÿÿ8ìéÕàâ1
+X	java:S125I"<This block of commented-out lines of code should be removed.(Œ¿¡8úéÕàâ1
+]	java:S125["<This block of commented-out lines of code should be removed.(™ëÄ†şÿÿÿÿ8íÌÇáâ1
+X
+java:S1874p"6Remove this use of "getPackageInfo"; it is deprecated.(Îƒ¢¶ÿÿÿÿÿ8‚êÕàâ1
+W
+java:S1874y":Remove this use of "getApplicationInfo"; it is deprecated.(ÆéÄê8 ³’áâ1

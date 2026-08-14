@@ -67,8 +67,8 @@ public class Demo extends AppCompatActivity {
         lblSubamtKTU.append(" \u20B9"+"150");
         lblSubAmtSncst.append(" \u20B9"+"150");
         */
-         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
-                 WindowManager.LayoutParams.FLAG_SECURE);
+//         getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE,
+//                 WindowManager.LayoutParams.FLAG_SECURE);
         Window window =getWindow();
 
 // clear FLAG_TRANSLUCENT_STATUS flag:

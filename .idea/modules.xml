@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/StudyDesk.iml" filepath="$PROJECT_DIR$/.idea/modules/StudyDesk.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudyDesk.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudyDesk.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudyDesk.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudyDesk.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudyDesk.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudyDesk.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/StudyDesk.iml" filepath="$PROJECT_DIR$/.idea/StudyDesk.iml" />
     </modules>
   </component>
 </project>
