@@ -2,9 +2,11 @@ package com.example.admin.studydesk;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 
@@ -32,7 +34,11 @@ import com.example.admin.studydesk.R;
 
 import im.delight.android.webview.AdvancedWebView;
 
+import java.net.URISyntaxException;
+
 public class SecondDtl extends AppCompatActivity {
+    /** Request code Razorpay's WebView integration uses for the UPI intent round-trip. */
+    private static final int UPI_INTENT_REQUEST_CODE = 2001;
     Button btnHome;
     AdvancedWebView webView;
     TextView tvTitle;
@@ -140,6 +146,18 @@ public class SecondDtl extends AppCompatActivity {
             webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
         }
 
+        // Razorpay Checkout hides UPI entirely when it detects a WebView, which it does via the
+        // "wv" and "Version/4.0" tokens Android puts in the User-Agent. Drop those two markers so
+        // checkout serves the mobile-web UPI intent flow; the deep links it then emits are handled
+        // by launchPaymentApp() below. Everything else in the UA (real Chrome version, device) is
+        // left untouched.
+        String userAgent = webView.getSettings().getUserAgentString();
+        if (userAgent != null) {
+            String patched = userAgent.replace("; wv", "").replace("Version/4.0 ", "");
+            webView.getSettings().setUserAgentString(patched);
+            Log.d("PaymentWebView", "User-Agent: " + patched);
+        }
+
         // Enable cookies
         CookieManager cookieManager = CookieManager.getInstance();
         cookieManager.setAcceptCookie(true);
@@ -163,8 +181,14 @@ public class SecondDtl extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                view.loadUrl(url);
-                return true;
+                if (url.startsWith("http://") || url.startsWith("https://")) {
+                    // Let the WebView load it itself. Calling loadUrl() here instead would
+                    // re-issue the navigation as a GET and drop any POST body.
+                    return false;
+                }
+                // upi://, intent://, phonepe://, tez://, paytmmp:// ... a WebView cannot load
+                // these; they have to be handed to the UPI app.
+                return launchPaymentApp(url);
             }
 
             @Override
@@ -202,6 +226,54 @@ public class SecondDtl extends AppCompatActivity {
                         .show();
             }
         });
+    }
+
+    /**
+     * Hands a non-http deep link (UPI intent) to the installed payment app.
+     * Razorpay Checkout only emits these when the page passes webview_intent: true.
+     * Always returns true: the WebView must not try to load these schemes itself.
+     */
+    private boolean launchPaymentApp(String url) {
+        Intent intent;
+        try {
+            if (url.startsWith("intent://")) {
+                intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
+                // The URL comes from web content, so never let it pick a component of ours.
+                intent.setComponent(null);
+                intent.setSelector(null);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            } else {
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            }
+        } catch (URISyntaxException e) {
+            Log.e("PaymentWebView", "Malformed deep link: " + url, e);
+            return true;
+        }
+
+        try {
+            startActivityForResult(intent, UPI_INTENT_REQUEST_CODE);
+        } catch (ActivityNotFoundException e) {
+            String fallback = intent.getStringExtra("browser_fallback_url");
+            if (fallback != null) {
+                webView.loadUrl(fallback);
+            } else {
+                Log.w("PaymentWebView", "No app installed for: " + url);
+                Toast.makeText(this, "No UPI app found. Please choose another payment method.",
+                        Toast.LENGTH_LONG).show();
+            }
+        }
+        return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == UPI_INTENT_REQUEST_CODE) {
+            // Razorpay Checkout polls the payment status server-side once we return, so there is
+            // nothing to post back into the page. Logged only to make failures diagnosable.
+            Log.d("PaymentWebView", "Returned from UPI app, resultCode=" + resultCode
+                    + ", response=" + (data == null ? "null" : data.getStringExtra("response")));
+        }
     }
 
 

@@ -4,26 +4,25 @@ android {
     namespace 'com.example.admin.studydesk'
     signingConfigs {
         arstudydesk {
-            storeFile file('D:\\StudyDesk (1)\\Studydesk\\StudyDesk.iml')
+            storeFile rootProject.file('arstudydeskkey.jks')
             storePassword 'arstudydesk'
             keyAlias = var
             keyPassword 'arstudydesk'
         }
     }
-    compileSdk 35
-    buildToolsVersion '30.0.3'
+    compileSdk 36
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "com.arstudydesk.admin.studydesk"
         minSdkVersion 17
-        targetSdk 35
-        versionCode 21
-        versionName "21.0"
+        targetSdk 36
+        versionCode 22
+        versionName "22.0"
     }
     buildTypes {
         release {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.arstudydesk
         }
     }
 }
