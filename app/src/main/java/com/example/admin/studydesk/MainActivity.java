@@ -98,6 +98,13 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setDisplayZoomControls(false);
+        if (link == null || link.trim().isEmpty()) {
+            // Started without the calling screen setting the static link - e.g. an external
+            // launch or an automated crawler opening this activity directly. Nothing to load.
+            Toast.makeText(this, "Nothing to show.", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
         webView.loadUrl(link);
         webView.setWebViewClient(new WebViewClient() {
 
@@ -179,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(MainActivity.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -232,6 +240,11 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("MainActivity", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override

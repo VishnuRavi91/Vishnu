@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import android.view.View;
 import android.view.Window;
@@ -47,6 +48,7 @@ import java.util.Date;
 import java.util.List;
 
 public class GetCourse extends AppCompatActivity {
+    private static final String TAG = "GetCourse";
     String status,message;
     RecyclerView recyclerView;
     JSONArray jsonArray;
@@ -55,6 +57,26 @@ public class GetCourse extends AppCompatActivity {
     Button btnLogout;
     String jwtKey= "ar*(}[+=)study@#$%desk";
     public List<String> list = new ArrayList<String>();
+
+    /**
+     * Records a failure for onPostExecute to report. Every early return in doInBackground goes
+     * through here so a network or payload problem shows a message instead of crashing on a null.
+     */
+    private String fail(String reason) {
+        status = "error";
+        message = reason;
+        return status;
+    }
+
+    /** Dismissing a dialog whose activity has already gone throws; swallow that. */
+    private static void dismissDialog(ProgressDialog dialog) {
+        try {
+            if (dialog != null && dialog.isShowing()) {
+                dialog.dismiss();
+            }
+        } catch (IllegalArgumentException ignored) {
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +167,7 @@ public class GetCourse extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(GetCourse.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -158,7 +181,10 @@ public class GetCourse extends AppCompatActivity {
             try {
                 stringEntity = new StringEntity(json.toString());
             } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
+                Log.e(TAG, "Could not build the courses request", e);
+            }
+            if (stringEntity == null) {
+                return fail("Could not prepare the request. Please try again.");
             }
             post.addHeader("authorization",token);
             stringEntity.setContentEncoding("UTF-8");
@@ -169,7 +195,10 @@ public class GetCourse extends AppCompatActivity {
             try {
                 response = client.execute(post);
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.e(TAG, "getcourses request failed", e);
+            }
+            if (response == null) {
+                return fail("Could not reach the server. Please check your connection.");
             }
 
             String responseBody = null;
@@ -177,29 +206,23 @@ public class GetCourse extends AppCompatActivity {
                 responseBody = EntityUtils
                         .toString(response.getEntity());
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.e(TAG, "Could not read the courses response", e);
             }
-            String res= responseBody.toString();
+            if (responseBody == null) {
+                return fail("The server returned an empty response. Please try again.");
+            }
+
             jsonObj = null;
             try {
-                jsonObj = new JSONObject(res);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-            String Response = null;
-            try {
+                jsonObj = new JSONObject(responseBody);
                 status = jsonObj.getString("status");
+                message = jsonObj.optString("message", "");
             } catch (JSONException e) {
-                e.printStackTrace();
+                Log.e(TAG, "Unexpected courses response: " + responseBody, e);
+                return fail("The server sent an unexpected response.");
             }
 
-            try {
-                message=jsonObj.getString("message");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 try {
                     String tutorials="";
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -215,11 +238,19 @@ public class GetCourse extends AppCompatActivity {
                     }
 
                 } catch (JSONException e) {
-                    e.printStackTrace();
+                    Log.e(TAG, "Could not read courses out of the payload", e);
+                    return fail("Could not read the course list.");
                 }
-
+                if (jsonArray == null) {
+                    return fail("No courses available right now.");
+                }
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("GetCourse", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override
@@ -232,10 +263,13 @@ public class GetCourse extends AppCompatActivity {
         protected void onPostExecute (String result)
         {
             super.onPostExecute(result);
-            dialog.dismiss();
+            dismissDialog(dialog);
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
             // TV.setText(result);
-            if (status.equals("success")){
+            if (isFinishing() || isDestroyed()) {
+                return;
+            }
+            if ("success".equals(status) && jsonArray != null){
                 Date currentTime = Calendar.getInstance().getTime();
                 SharedPreferences.Editor editor = getSharedPreferences("TOKEN", MODE_PRIVATE).edit();
                 editor.putString("token", token);
@@ -254,7 +288,9 @@ public class GetCourse extends AppCompatActivity {
                 //Intent intent = new Intent(GetCourse.this, ModuleSelection.class);
                // startActivity(intent);
             }else{
-                Toast.makeText(GetCourse.this, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(GetCourse.this,
+                        message == null || message.isEmpty() ? "Could not load the courses." : message,
+                        Toast.LENGTH_LONG).show();
             }
 
         }
@@ -295,6 +331,7 @@ public class GetCourse extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(GetCourse.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -348,6 +385,11 @@ public class GetCourse extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("GetCourse", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override
@@ -384,6 +426,7 @@ public class GetCourse extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(GetCourse.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -437,6 +480,11 @@ public class GetCourse extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("GetCourse", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override

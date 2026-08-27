@@ -159,6 +159,7 @@ public class Splash extends AppCompatActivity {
        // private final ProgressDialog dialog = new ProgressDialog(Splash.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -210,7 +211,7 @@ public class Splash extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 try {
                     token=jsonObj.getString("access_token");
                     SharedPreferences.Editor editor = getSharedPreferences("TOKEN", MODE_PRIVATE).edit();
@@ -228,6 +229,11 @@ public class Splash extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("Splash", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override
@@ -243,7 +249,7 @@ public class Splash extends AppCompatActivity {
          //   dialog.dismiss();
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
             // TV.setText(result);
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 Intent intent = new Intent(Splash.this, GetCourse.class);
                 startActivity(intent);
             }else{
@@ -265,6 +271,7 @@ public class Splash extends AppCompatActivity {
         //private final ProgressDialog dialog = new ProgressDialog(Splash.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -318,6 +325,11 @@ public class Splash extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("Splash", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override

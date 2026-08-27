@@ -162,6 +162,13 @@ public class RefferalDtl extends AppCompatActivity {
             } });
 
 
+        if (link == null || link.trim().isEmpty()) {
+            // Started without the calling screen setting the static link - e.g. an external
+            // launch or an automated crawler opening this activity directly. Nothing to load.
+            Toast.makeText(this, "Nothing to show.", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
         webView.loadUrl(link);
     }
 

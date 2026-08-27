@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.provider.Settings;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.Window;
@@ -62,9 +63,13 @@ public class Second extends AppCompatActivity {
         Toast.makeText(this, Build.FINGERPRINT, Toast.LENGTH_SHORT).show();
 */
         EmulatorDetector.with(this)
-                .setCheckTelephony(true)
+                // Must stay false. The telephony probe calls TelephonyManager.getLine1Number(),
+                // which needs READ_PHONE_NUMBERS (or READ_SMS) on Android 11+. This app declares
+                // neither and never requests READ_PHONE_STATE at runtime, so that call throws
+                // SecurityException on a bare Thread inside the library and kills the process.
+                .setCheckTelephony(false)
                 .addPackageName("com.bluestacks")
-                .setDebug(true)
+                .setDebug(false)
                 .detect(new EmulatorDetector.OnEmulatorDetectorListener() {
                     @Override
                     public void onResult(boolean isEmulator) {
@@ -302,6 +307,7 @@ public class Second extends AppCompatActivity {
          private final ProgressDialog dialog = new ProgressDialog(Second.this);
         @Override
         protected String doInBackground (String...params){
+            try {
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
             JSONObject json=new JSONObject();
@@ -353,7 +359,7 @@ public class Second extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 try {
                     token=jsonObj.getString("access_token");
                     SharedPreferences.Editor editor = getSharedPreferences("TOKEN", MODE_PRIVATE).edit();
@@ -372,6 +378,11 @@ public class Second extends AppCompatActivity {
             }
             return status;
 
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("Second", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override
@@ -387,7 +398,7 @@ public class Second extends AppCompatActivity {
               dialog.dismiss();
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
             // TV.setText(result);
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 Intent intent = new Intent(Second.this, GetCourse.class);
                 startActivity(intent);
             }else{

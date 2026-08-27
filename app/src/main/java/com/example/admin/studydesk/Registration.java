@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 
 import android.view.Window;
 import android.view.WindowManager;
@@ -102,6 +103,7 @@ public class Registration extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(Registration.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -155,6 +157,11 @@ public class Registration extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("Registration", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override

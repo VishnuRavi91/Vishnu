@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.provider.Settings;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -172,6 +173,7 @@ public class LoginActivity extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -233,7 +235,7 @@ public class LoginActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 try {
                     token=jsonObj.getString("access_token");
                     SharedPreferences.Editor editor = getSharedPreferences("TOKEN", MODE_PRIVATE).edit();
@@ -252,7 +254,12 @@ public class LoginActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
-         }
+                     } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("LoginActivity", "Background task failed", e);
+                return null;
+            }
+        }
 
         @Override
         protected void onPreExecute() {
@@ -267,7 +274,7 @@ public class LoginActivity extends AppCompatActivity {
             dialog.dismiss();
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
             // TV.setText(result);
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 Intent intent = new Intent(LoginActivity.this, VerifyOtp.class);
                 startActivity(intent);
             }else{
@@ -294,6 +301,7 @@ public class LoginActivity extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -354,6 +362,11 @@ public class LoginActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("LoginActivity", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override
@@ -388,6 +401,7 @@ public class LoginActivity extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(LoginActivity.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -441,6 +455,11 @@ public class LoginActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("LoginActivity", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override

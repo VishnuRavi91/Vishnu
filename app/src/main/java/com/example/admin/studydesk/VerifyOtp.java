@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -101,6 +102,7 @@ public class VerifyOtp extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(VerifyOtp.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -162,6 +164,11 @@ public class VerifyOtp extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("VerifyOtp", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override
@@ -177,7 +184,7 @@ public class VerifyOtp extends AppCompatActivity {
             dialog.dismiss();
             //Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
             // TV.setText(result);
-            if (status.equals("success")){
+            if ("success".equals(status)){
                 Date currentTime = Calendar.getInstance().getTime();
                 SharedPreferences.Editor editor = getSharedPreferences("TOKEN", MODE_PRIVATE).edit();
                 editor.putString("token", token);
@@ -203,6 +210,7 @@ public class VerifyOtp extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(VerifyOtp.this);
         @Override
         protected String doInBackground (String...params){
+            try {
 
             HttpClient client = new DefaultHttpClient();
             HttpResponse response = null;
@@ -256,6 +264,11 @@ public class VerifyOtp extends AppCompatActivity {
                 e.printStackTrace();
             }
             return status;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("VerifyOtp", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override

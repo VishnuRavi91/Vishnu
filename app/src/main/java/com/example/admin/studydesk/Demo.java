@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.widget.Toast;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -40,7 +41,9 @@ public class Demo extends AppCompatActivity {
     Button btnDemoKtu,btnDemoSncst,btnSylKtu,btnSylSncst,btnHome,btnSubChargeKTU,btnSubChargeSNCST,btnComing;
     TextView lblSubamtKTU,lblSubAmtSncst;
     public static List<String> list = new ArrayList<String>();
+    private static final String TAG = "Demo";
     static JSONArray jsonArray;
+    static String loadError;
     JSONObject jsonObj;
     RecyclerView recyclerView;
     SimpleAdapterDemo simpleAdapterDemo;
@@ -156,6 +159,8 @@ public class Demo extends AppCompatActivity {
         new AsyncCallSoap().execute();
     }
     public static JSONObject readAllData() {
+        jsonArray = null;
+        loadError = null;
         try {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
@@ -163,16 +168,25 @@ public class Demo extends AppCompatActivity {
                     .build();
             response = client.newCall(request).execute();
             //return new JSONObject(response.body().string());
-            JSONObject jsonObj = null;
-            try {
-                jsonObj = new JSONObject(response.body().string());
-            } catch (JSONException e) {
-                e.printStackTrace();
+            String body = response.body() == null ? null : response.body().string();
+            if (body == null) {
+                loadError = "The server returned an empty response.";
+                return null;
             }
+            JSONObject jsonObj;
             try {
-                jsonArray = jsonObj.getJSONArray("records");
+                jsonObj = new JSONObject(body);
             } catch (JSONException e) {
-                e.printStackTrace();
+                // Not JSON at all - the endpoint is returning an error page.
+                Log.e(TAG, "Demo feed is not JSON: " + body.substring(0, Math.min(300, body.length())), e);
+                loadError = "The demo service is unavailable. Please try again later.";
+                return null;
+            }
+            jsonArray = jsonObj.optJSONArray("records");
+            if (jsonArray == null) {
+                Log.e(TAG, "Demo feed has no 'records' array: " + body.substring(0, Math.min(300, body.length())));
+                loadError = "No demo content available right now.";
+                return null;
             }
             for (int i=0;i<jsonArray.length();i++){
                 try {
@@ -182,9 +196,20 @@ public class Demo extends AppCompatActivity {
                 }
             }
         } catch (@NonNull IOException e) {
-            Log.e("TAG", "" + e.getLocalizedMessage());
+            Log.e(TAG, "Could not reach the demo service", e);
+            loadError = "Could not reach the server. Please check your connection.";
         }
         return null;
+    }
+
+    /** Dismissing a dialog whose activity has already gone throws; swallow that. */
+    private static void dismissDialog(ProgressDialog dialog) {
+        try {
+            if (dialog != null && dialog.isShowing()) {
+                dialog.dismiss();
+            }
+        } catch (IllegalArgumentException ignored) {
+        }
     }
     public class AsyncCallSoap extends AsyncTask<String,Void,String>
     {
@@ -196,8 +221,14 @@ public class Demo extends AppCompatActivity {
         private final ProgressDialog dialog = new ProgressDialog(Demo.this);
         @Override
         protected String doInBackground (String...params){
+            try {
             readAllData();
             return null;
+                    } catch (Exception e) {
+                // Containment: an uncaught throw here would kill the process.
+                Log.e("Demo", "Background task failed", e);
+                return null;
+            }
         }
 
         @Override
@@ -210,7 +241,16 @@ public class Demo extends AppCompatActivity {
         protected void onPostExecute (String result)
         {
             super.onPostExecute(result);
-            dialog.dismiss();
+            dismissDialog(dialog);
+            if (isFinishing() || isDestroyed()) {
+                return;
+            }
+            if (jsonArray == null) {
+                Toast.makeText(Demo.this,
+                        loadError == null ? "Could not load the demos." : loadError,
+                        Toast.LENGTH_LONG).show();
+                return;
+            }
             simpleAdapterDemo=new SimpleAdapterDemo(jsonArray,Demo.this);
             recyclerView.setAdapter(simpleAdapterDemo);
         }

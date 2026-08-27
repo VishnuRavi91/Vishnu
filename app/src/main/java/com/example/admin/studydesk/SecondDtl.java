@@ -130,6 +130,13 @@ public class SecondDtl extends AppCompatActivity {
 //            @Override public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
 //                webView.loadUrl("file:///android_asset/error.html");
 //            } });
+        if (link == null || link.trim().isEmpty()) {
+            // Started without the calling screen setting the static link - e.g. an external
+            // launch or an automated crawler opening this activity directly. Nothing to load.
+            Toast.makeText(this, "Nothing to show.", Toast.LENGTH_SHORT).show();
+            finish();
+            return;
+        }
         webView.loadUrl(link,true);
 
     }
